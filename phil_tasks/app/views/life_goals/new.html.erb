@@ -1,0 +1,8 @@
+<h1>Enter a New Life Goal Below</h1>
+<form action="/life_goals" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>New Life Goal:</p>
+  <input type='text' name='life_goal[title]'/><br/>
+  <textarea name='life_goal[description]'></textarea><br/>
+  <input type='submit'/>
+</form>

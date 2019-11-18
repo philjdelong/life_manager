@@ -1,0 +1,15 @@
+<h2>These are Phil's Current Life Goals</h2>
+
+<% @life_goals.each do |life_goal| %>
+  <h3><a href="/life_goals/<%= life_goal.id %>"><%= life_goal.title %></a></h3>
+  <p><%= life_goal.description %></p>
+  <a href="/life_goals/<%= life_goal.id  %>/edit">Edit</a>
+  <form action="/life_goals/<%= life_goal.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete"/>
+  </form>
+<% end %>
+
+</br>
+<a href="/">Back to Goals Home</a>

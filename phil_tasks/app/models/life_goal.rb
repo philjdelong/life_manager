@@ -1,0 +1,3 @@
+class LifeGoal < ApplicationRecord
+
+end
